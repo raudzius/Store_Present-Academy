@@ -20,6 +20,9 @@ const Header = () => (
       <Button component={RouterLink} to="signup" color="inherit">
         Sign Up
       </Button>
+      <Button component={RouterLink} to="signin" color="inherit">
+        Sign In
+      </Button>
     </Toolbar>
   </AppBar>
 );

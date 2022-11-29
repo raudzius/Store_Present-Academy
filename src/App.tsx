@@ -6,6 +6,7 @@ import NewProduct from './admin/pages/NewProduct';
 import Navigation from './shared/components/Navigation';
 import ErrorPage from './shared/pages/ErrorPage';
 import SignUpPage from './shared/pages/SignUpPage';
+import SignInPage from './shared/pages/SignInPage';
 
 const router = createBrowserRouter([
   {
@@ -27,7 +28,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'signin',
-        element: <div>Signin</div>,
+        element: <SignInPage />,
       },
     ],
   },
