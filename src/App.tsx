@@ -5,6 +5,7 @@ import AllProductsPage from './shared/pages/AllProductsPage';
 import NewProduct from './admin/pages/NewProduct';
 import Navigation from './shared/components/Navigation';
 import ErrorPage from './shared/pages/ErrorPage';
+import SignUpPage from './shared/pages/SignUpPage';
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'signup',
-        element: <div>Signup</div>,
+        element: <SignUpPage />,
       },
       {
         path: 'signin',
