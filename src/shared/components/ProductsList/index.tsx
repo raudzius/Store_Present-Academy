@@ -1,8 +1,6 @@
-import {
- Box, List, ListItem, Typography,
-} from '@mui/material';
+import { Box, List, Typography } from '@mui/material';
 import React from 'react';
-import { type Product } from '../../pages/AllProducts';
+import { type Product } from '../../pages/AllProductsPage';
 import ProductItem from './components/ProductItem';
 
 type ProductsListProps = {
@@ -19,11 +17,9 @@ const ProductsList: React.FC<ProductsListProps> = ({ products }) => {
   }
 
   return (
-    <List>
+    <List sx={{ height: 'calc(100vh - 136px)' }}>
       {products.map(({ id, image, title }) => (
-        <ListItem>
-          <ProductItem key={id} id={id} title={title} image={image} />
-        </ListItem>
+        <ProductItem key={id} id={id} title={title} image={image} />
       ))}
     </List>
   );
