@@ -16,6 +16,6 @@ const products: Product[] = [
   },
 ];
 
-const AllProducts: React.FC = () => <ProductsList products={products} />;
+const AllProductsPage: React.FC = () => <ProductsList products={products} />;
 
-export default AllProducts;
+export default AllProductsPage;
