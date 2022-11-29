@@ -1,25 +1,34 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import AllProducts from './shared/pages/AllProducts';
+import AllProductsPage from './shared/pages/AllProductsPage';
 import NewProduct from './admin/pages/NewProduct';
+import Navigation from './shared/components/Navigation';
+import ErrorPage from './shared/pages/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <AllProducts />,
-  },
-  {
-    path: 'signup',
-    element: <div>Signup</div>,
-  },
-  {
-    path: 'signin',
-    element: <div>Signup</div>,
-  },
-  {
-    path: 'products/new',
-    element: <NewProduct />,
+    element: <Navigation />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: 'products/all',
+        element: <AllProductsPage />,
+      },
+      {
+        path: 'products/new',
+        element: <NewProduct />,
+      },
+      {
+        path: 'signup',
+        element: <div>Signup</div>,
+      },
+      {
+        path: 'signin',
+        element: <div>Signin</div>,
+      },
+    ],
   },
 ]);
 
