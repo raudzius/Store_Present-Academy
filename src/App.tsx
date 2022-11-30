@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Box } from '@mui/material';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import AllProductsPage from './shared/pages/AllProductsPage';
 import NewProduct from './admin/pages/NewProduct';
@@ -7,6 +6,7 @@ import Navigation from './shared/components/Navigation';
 import ErrorPage from './shared/pages/ErrorPage';
 import SignUpPage from './shared/pages/SignUpPage';
 import SignInPage from './shared/pages/SignInPage';
+import ShoppingCart from './customer/pages/ShoppingCart';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +23,10 @@ const router = createBrowserRouter([
         element: <NewProduct />,
       },
       {
+        path: 'cart',
+        element: <ShoppingCart />,
+      },
+      {
         path: 'signup',
         element: <SignUpPage />,
       },
@@ -34,10 +38,6 @@ const router = createBrowserRouter([
   },
 ]);
 
-const App: React.FC = () => (
-  <Box>
-    <RouterProvider router={router} />
-  </Box>
-);
+const App: React.FC = () => <RouterProvider router={router} />;
 
 export default App;
