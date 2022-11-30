@@ -23,6 +23,12 @@ const Header = () => (
       <Button component={RouterLink} to="customer/orders" color="inherit">
         My Orders
       </Button>
+      <Button component={RouterLink} to="admin/dashboard" color="inherit">
+        Dashboard
+      </Button>
+      <Button component={RouterLink} to="admin/orders/all" color="inherit">
+        All Orders
+      </Button>
       <Button component={RouterLink} to="signup" color="inherit">
         Sign Up
       </Button>

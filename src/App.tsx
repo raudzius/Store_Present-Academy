@@ -8,6 +8,9 @@ import SignUpPage from './shared/pages/SignUpPage';
 import SignInPage from './shared/pages/SignInPage';
 import ShoppingCartPage from './customer/pages/ShoppingCartPage';
 import CustomerOrdersPage from './customer/pages/CustomerOrdersPage';
+import Dashboard from './admin/pages/DashboardPage';
+import AllOrders from './admin/pages/AllOrders';
+import ProductPage from './shared/pages/ProductPage';
 
 const router = createBrowserRouter([
   {
@@ -20,8 +23,8 @@ const router = createBrowserRouter([
         element: <AllProductsPage />,
       },
       {
-        path: 'products/new',
-        element: <NewProduct />,
+        path: 'products/:productId',
+        element: <ProductPage />,
       },
       {
         path: 'cart',
@@ -30,6 +33,18 @@ const router = createBrowserRouter([
       {
         path: 'customer/orders',
         element: <CustomerOrdersPage />,
+      },
+      {
+        path: 'products/new',
+        element: <NewProduct />,
+      },
+      {
+        path: 'admin/dashboard',
+        element: <Dashboard />,
+      },
+      {
+        path: 'admin/orders/all',
+        element: <AllOrders />,
       },
       {
         path: 'signup',
