@@ -19,7 +19,6 @@ const ProductsList: React.FC<ProductsListProps> = ({ products }) => {
   return (
     <List
       sx={{
-        minHeight: 'calc(100vh - 136px)',
         display: 'flex',
         flexWrap: 'wrap',
       }}
