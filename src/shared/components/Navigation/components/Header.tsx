@@ -20,6 +20,9 @@ const Header = () => (
       <Button component={RouterLink} to="cart" color="inherit">
         Cart
       </Button>
+      <Button component={RouterLink} to="customer/orders" color="inherit">
+        My Orders
+      </Button>
       <Button component={RouterLink} to="signup" color="inherit">
         Sign Up
       </Button>

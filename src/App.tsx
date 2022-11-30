@@ -7,6 +7,7 @@ import ErrorPage from './shared/pages/ErrorPage';
 import SignUpPage from './shared/pages/SignUpPage';
 import SignInPage from './shared/pages/SignInPage';
 import ShoppingCartPage from './customer/pages/ShoppingCartPage';
+import CustomerOrdersPage from './customer/pages/CustomerOrdersPage';
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: 'cart',
         element: <ShoppingCartPage />,
+      },
+      {
+        path: 'customer/orders',
+        element: <CustomerOrdersPage />,
       },
       {
         path: 'signup',
