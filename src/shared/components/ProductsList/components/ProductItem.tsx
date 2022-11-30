@@ -8,8 +8,8 @@ import { type Product } from '../../../pages/AllProductsPage';
 type ProductItemProps = Product;
 
 const ProductItem: React.FC<ProductItemProps> = ({ id, title, image }) => (
-  <ListItem>
-    <Card sx={{ maxWidth: 345 }}>
+  <ListItem sx={{ width: 345 }}>
+    <Card sx={{ height: 400 }}>
       <Link component={RouterLink} to={`/products/${id}`} color="inherit" underline="none">
         <CardMedia component="img" alt="product" height="200" image={image} />
         <CardContent>
