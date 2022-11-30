@@ -7,10 +7,25 @@ import { type Product } from '../../../pages/AllProductsPage';
 
 type ProductItemProps = Product;
 
-const ProductItem: React.FC<ProductItemProps> = ({ id, title, image }) => (
+const ProductItem: React.FC<ProductItemProps> = ({
+ id, title, image, description,
+}) => (
   <ListItem sx={{ width: 345 }}>
     <Card sx={{ height: 400 }}>
-      <Link component={RouterLink} to={`/products/${id}`} color="inherit" underline="none">
+      <Link
+        component={RouterLink}
+        to={{
+          pathname: `/products/${id}`,
+        }}
+        state={{
+          id,
+          title,
+          image,
+          description,
+        }}
+        color="inherit"
+        underline="none"
+      >
         <CardMedia component="img" alt="product" height="200" image={image} />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
@@ -18,9 +33,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ id, title, image }) => (
             {id}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem atque, dolore earum
-            dolorem ipsa tempore voluptatibus quasi reiciendis aut doloribus eos, culpa sint debitis
-            quisquam mollitia ratione velit ut. Ad!
+            {description}
           </Typography>
         </CardContent>
       </Link>

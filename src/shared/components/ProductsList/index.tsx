@@ -23,8 +23,10 @@ const ProductsList: React.FC<ProductsListProps> = ({ products }) => {
         flexWrap: 'wrap',
       }}
     >
-      {products.map(({ id, image, title }) => (
-        <ProductItem key={id} id={id} title={title} image={image} />
+      {products.map(({
+ id, image, title, description,
+}) => (
+  <ProductItem key={id} id={id} title={title} image={image} description={description} />
       ))}
     </List>
   );
