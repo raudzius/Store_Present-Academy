@@ -6,7 +6,7 @@ import Navigation from './shared/components/Navigation';
 import ErrorPage from './shared/pages/ErrorPage';
 import SignUpPage from './shared/pages/SignUpPage';
 import SignInPage from './shared/pages/SignInPage';
-import ShoppingCart from './customer/pages/ShoppingCart';
+import ShoppingCartPage from './customer/pages/ShoppingCartPage';
 
 const router = createBrowserRouter([
   {
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'cart',
-        element: <ShoppingCart />,
+        element: <ShoppingCartPage />,
       },
       {
         path: 'signup',
