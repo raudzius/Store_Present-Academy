@@ -16,7 +16,7 @@ const ErrorPage = () => {
 
   return (
     <Box sx={{
- width: '30%', height: '100vh', mx: 'auto', mt: '40vh',
+ width: '30%', minHeight: '100vh', mx: 'auto', mt: '40vh',
 }}
     >
       <Alert severity="error">

@@ -17,7 +17,7 @@ const ProductsList: React.FC<ProductsListProps> = ({ products }) => {
   }
 
   return (
-    <List sx={{ height: 'calc(100vh - 136px)' }}>
+    <List sx={{ minHeight: 'calc(100vh - 136px)' }}>
       {products.map(({ id, image, title }) => (
         <ProductItem key={id} id={id} title={title} image={image} />
       ))}
