@@ -36,7 +36,7 @@ const SignUpPage = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs" sx={{ height: 'calc(100vh - 200px)' }}>
+      <Container component="div" maxWidth="xs">
         <Box
           sx={{
             marginTop: 8,

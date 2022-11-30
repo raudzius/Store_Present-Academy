@@ -32,7 +32,7 @@ const SignInPage = () => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Container component="main" maxWidth="xs" sx={{ minHeight: 'calc(100vh - 200px)' }}>
+      <Container component="div" maxWidth="xs">
         <Box
           sx={{
             marginTop: 8,
