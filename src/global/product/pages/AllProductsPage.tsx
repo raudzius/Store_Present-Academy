@@ -1,13 +1,6 @@
 import React from 'react';
 import ProductsList from '../components/ProductsList';
 
-export type Product = {
-  id: string;
-  title: string;
-  image: string;
-  description: string;
-};
-
 const products: Product[] = [
   {
     id: 'p1',

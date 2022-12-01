@@ -1,6 +1,5 @@
 import { Box, List, Typography } from '@mui/material';
 import React from 'react';
-import { type Product } from '../../pages/AllProductsPage';
 import ProductItem from './components/ProductItem';
 
 type ProductsListProps = {
