@@ -12,6 +12,7 @@ import {
   Typography,
 } from '@mui/material';
 import { LockOutlined } from '@mui/icons-material';
+import { Link as RouterLink } from 'react-router-dom';
 
 const SignInPage = () => {
   const [email, setEmail] = React.useState('');
@@ -31,11 +32,11 @@ const SignInPage = () => {
     <Container component="div" maxWidth="xs">
       <Box
         sx={{
-            marginTop: 8,
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
+          marginTop: 8,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
       >
         <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
           <LockOutlined />
@@ -78,20 +79,15 @@ const SignInPage = () => {
                 checked={remember}
                 onChange={(e) => setRemember(e.target.checked)}
               />
-              )}
+            )}
             label="Remember me"
           />
           <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
             Sign In
           </Button>
-          <Grid container>
-            <Grid item xs>
-              <Link href="https://google.com" variant="body2">
-                Forgot password?
-              </Link>
-            </Grid>
+          <Grid container justifyContent="flex-end">
             <Grid item>
-              <Link href="https://google.com" variant="body2">
+              <Link component={RouterLink} to="../signup" variant="body2">
                 Don&apos;t have an account? Sign Up
               </Link>
             </Grid>
