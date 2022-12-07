@@ -5,7 +5,7 @@ import Navigation from './shared/components/Navigation';
 import ShoppingCartPage from './authorized/customer/pages/ShoppingCartPage';
 import CustomerOrdersPage from './authorized/customer/pages/CustomerOrdersPage';
 import Dashboard from './authorized/admin/pages/DashboardPage';
-import AllOrders from './authorized/admin/pages/AllOrders';
+import AllOrders from './authorized/admin/pages/AllOrdersPage';
 import ErrorPage from './global/error/pages/ErrorPage';
 import AllProductsPage from './global/product/pages/AllProductsPage';
 import ProductPage from './global/product/pages/ProductPage';
